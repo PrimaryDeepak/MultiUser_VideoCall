@@ -1,11 +1,13 @@
 import './App.css'
+import MeetingPage from './MeetingPage'
 import VideoCall from './VideoCall'
 
 function App() {
 
   return (
     <>
-    <VideoCall/>
+    {/* <VideoCall/> */}
+    <MeetingPage></MeetingPage>
     </>
   )
 }

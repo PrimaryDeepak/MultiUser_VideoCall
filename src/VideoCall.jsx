@@ -109,7 +109,7 @@ function VideoCall() {
             <Flex vertical style={{ display: "flex", height: "calc(100vh - 70px)" }}>
                 <Flex vertical style={{ width: "63%", backgroundColor: "#f0f2f5" }}>
                     {/*Top Flex*/}
-                    <Flex horizontal justify="space-between" align="center" style={{ height: "55px" }}>
+                    <Flex horizontal justify="space-between" align="center" style={{ height: "55px", border: "2px solid" }}>
                         <Flex vertical style={{ marginLeft: "10px" }}>
                             <span style={{ fontSize: "20px", fontWeight: "bold" }}>fmakmkmcamakmk</span>
                             <span>{new Date().toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</span>
@@ -120,12 +120,12 @@ function VideoCall() {
                     </Flex>
 
                     {/*2nd Flex*/}
-                    <Flex justify="center" align="center" style={{ height: "430px" }}>
+                    <Flex justify="center" align="center" style={{ height: "430px",border: "2px solid" }}>
                         <Participant stream={stream} />
                     </Flex>
 
                     {/*3rd Flex*/}
-                    <Flex horizontal justify="space-around" align="center" style={{ height: "175px", marginLeft: "25px", marginRight: "25px" }}>
+                    <Flex horizontal justify="space-around" align="center" style={{ height: "175px", marginLeft: "25px", marginRight: "25px", border: "2px solid" }}>
                         {participants.slice(0, 3).map((participant, index) => (
                             <video
                                 key={participant.id}
@@ -180,7 +180,7 @@ function VideoCall() {
 
 
                     {/*Bottom Flex*/}
-                    <Flex justify="center" gap={30} style={{ height: "55px" }}>
+                    <Flex justify="center" gap={30} style={{ height: "55px", border: "2px solid" }}>
                         <Button shape="circle" type={videoEnabled ? "" : "primary"} danger={!videoEnabled} icon={videoEnabled ? <VideoCamera style={{ fontSize: "21px" }} /> : <VideoCameraOff style={{ fontSize: "21px" }} />} size="large" onClick={toggleCamera} />
                         <Button shape="circle" type={audioEnabled ? "" : "primary"} danger={!audioEnabled} icon={audioEnabled ? <OutlineMicNone style={{ fontSize: "21px" }} /> : <OutlineMicOff style={{ fontSize: "21px" }} />} size="large" onClick={toggleAudio} />
                         <Button shape="circle" icon={<ScreenBroadcast style={{ fontSize: "19px" }} />} size="large" onClick={toggleScreenShare} />
